@@ -21,28 +21,27 @@ at the indicated paths (they assume the official repo's `mkunet_network.py`,
 step1_experiment1_clinicdb/
     sanity_check.py               architecture/params/FLOPs verification (no training)
     train_polyp_paperconfig.py    paper-text-config comparison run (patched copy of train_polyp.py)
-    train_full_run.log            full log: shipped-defaults config, 5 runs x 200 epochs      [add from server]
-    train_paper_config_run.log    full log: paper-text config, 5 runs x 200 epochs             [add from server]
+    train_full_run.log            full log: shipped-defaults config, 5 runs x 200 epochs      
+    train_paper_config_run.log    full log: paper-text config, 5 runs x 200 epochs         
 
 step1_experiment2_brats/
     extract_brats_slices.py       BraTS2020 -> 2D axial FLAIR slice extraction pipeline
     train_brats.py                training script adapted for the extracted BraTS slices
-    extraction_log.txt            slice extraction run log                                     [add from server]
-    patient_split.txt             saved patient-level train/val/test split assignment           [add from server]
-    train_brats_full_run.log      full log: BraTS shipped-defaults config, 5 runs x 200 epochs  [add from server]
+    extraction_log.txt            slice extraction run log                                    
+    patient_split.txt             saved patient-level train/val/test split assignment       
+    train_brats_full_run.log      full log: BraTS shipped-defaults config, 5 runs x 200 epochs  
 
 step2_preliminary_result/
     prelim_degree_vs_difficulty.py   degree-centrality vs. per-slice Dice correlation analysis
-    prelim_result2_log.txt           run log                                                    [add from server]
-    prelim_result2_data.npz          raw per-slice dice/degree/correlation data                 [add from server]
-    prelim_result2_scatter.png       scatter plot figure                                        [add from server]
+    prelim_result2_log.txt           run log                                                    
+    prelim_result2_data.npz          raw per-slice dice/degree/correlation data                 
+    prelim_result2_scatter.png       scatter plot figure                                        
 
 environment/
     SimpleITK_stub.py             workaround for SimpleITK build failure under network isolation
 ```
 
-Files marked `[add from server]` are log/data files generated during training runs and are
-not code -- they should be copied in from the training server before pushing.
+
 
 ## Environment notes
 
