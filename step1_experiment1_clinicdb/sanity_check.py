@@ -53,8 +53,4 @@ if __name__ == '__main__':
     for name, channels in NET_CONFIGS.items():
         check(name, channels, img_size=256)
 
-    # Also check standard MK_UNet at 352x352 (the actual polyp training resolution
-    # used in train_polyp.py -- FLOPs will be higher than the 256x256 table numbers,
-    # the paper notes this explicitly: "FLOPs for polyp segmentation with 352x352
-    # inputs will be higher")
     check('MK_UNet', NET_CONFIGS['MK_UNet'], img_size=352)
