@@ -1,0 +1,23 @@
+=== Step 1: loading model and computing per-slice Dice ===
+Checkpoint loaded (ignored 102 thop profiling buffers, 0 real weight mismatches).
+Per-slice Dice: mean=0.6541, std=0.1975, min=0.0000, max=0.9211
+
+=== Step 2: building PRIME-style similarity graph ===
+Computing full pairwise SSIM distribution for threshold calibration...
+  0/274
+  50/274
+  100/274
+  150/274
+  200/274
+  250/274
+SSIM distribution: min=0.563, max=0.994, mean=0.674, median=0.664, p90=0.738, p95=0.792, p99=0.951
+Using calibrated threshold (90th percentile): 0.738
+Graph: 274 nodes, 3741 edges (10.0% of possible pairs)
+
+=== Step 3: Louvain community detection ===
+Communities: 6, modularity: 0.6876
+
+=== Step 4: correlation between degree and Dice ===
+Spearman correlation (degree vs. Dice): rho=0.0182, p=0.7636
+
+Saved: prelim_result2_data.npz, prelim_result2_scatter.png
